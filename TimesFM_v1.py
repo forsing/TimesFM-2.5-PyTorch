@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+from __future__ import annotations
+
 """
 LOTO 7/39 — GOOGLE TIMESFM 2.5 MAKSIMALNI ZERO-SHOT SISTEM
 
@@ -27,8 +29,6 @@ TimesFM ostaje zero-shot. Njegovi parametri se ne obučavaju.
 Obučavaju se samo završne težine TimesFM kandidata, koristeći
 isključivo walk-forward rezultate pre završnog holdouta.
 """
-
-from __future__ import annotations
 
 import math
 import random
