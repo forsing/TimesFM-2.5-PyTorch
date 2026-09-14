@@ -1830,7 +1830,324 @@ if __name__ == "__main__":
 
 
 """
+========================================================================================
+LOTO 7/39 — GOOGLE TIMESFM 2.5 MAKSIMALNI ZERO-SHOT SISTEM
+========================================================================================
+Seed: 39
+Teorijska stopa broja: 0.179487179
+Teorijsko očekivanje pogodaka: 1.256410256
+Ukupno mogućih kombinacija: 15,380,937
+TimesFM kandidata: 12
+Učitavanje TimesFM 2.5 modela: google/timesfm-2.5-200m-pytorch
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 
+========================================================================================
+OBRADA: Loto
+========================================================================================
+CSV: /data/loto7_4684_k73.csv
+Broj redova: 4,684
+Prvi red se tretira kao najstariji.
+Poslednji red se tretira kao najnoviji.
+TimesFM prikaza po broju: 3
+TimesFM konteksti: 256, 512, 1024, 2048
+Ukupno TimesFM kandidata: 12
+Walk-forward foldova: 5
+Koraka po foldu: 20
+Razvojni period: 4,584 redova
+Zamrznuti holdout: 100 redova
+
+========================================================================================
+1. PUNA EXPANDING WALK-FORWARD VALIDACIJA
+========================================================================================
+
+Walk-forward fold 1/5
+  Istorija pre prve provere: 128 redova
+  Provera redova: 129–148
+  TimesFM paket: 936/9,360
+  TimesFM paket: 1,872/9,360
+  TimesFM paket: 2,808/9,360
+  TimesFM paket: 3,744/9,360
+  TimesFM paket: 4,680/9,360
+  TimesFM paket: 5,616/9,360
+  TimesFM paket: 6,552/9,360
+  TimesFM paket: 7,488/9,360
+  TimesFM paket: 8,424/9,360
+  TimesFM paket: 9,360/9,360
+  Prosek pogodaka: 1.500000
+  Najviše pogodaka: 3
+  Stopa 3+: 5.0%
+  Stopa 4+: 0.0%
+
+Walk-forward fold 2/5
+  Istorija pre prve provere: 1,237 redova
+  Provera redova: 1,238–1,257
+  TimesFM paket: 936/9,360
+  TimesFM paket: 1,872/9,360
+  TimesFM paket: 2,808/9,360
+  TimesFM paket: 3,744/9,360
+  TimesFM paket: 4,680/9,360
+  TimesFM paket: 5,616/9,360
+  TimesFM paket: 6,552/9,360
+  TimesFM paket: 7,488/9,360
+  TimesFM paket: 8,424/9,360
+  TimesFM paket: 9,360/9,360
+  Prosek pogodaka: 1.000000
+  Najviše pogodaka: 3
+  Stopa 3+: 5.0%
+  Stopa 4+: 0.0%
+
+Walk-forward fold 3/5
+  Istorija pre prve provere: 2,346 redova
+  Provera redova: 2,347–2,366
+  TimesFM paket: 936/9,360
+  TimesFM paket: 1,872/9,360
+  TimesFM paket: 2,808/9,360
+  TimesFM paket: 3,744/9,360
+  TimesFM paket: 4,680/9,360
+  TimesFM paket: 5,616/9,360
+  TimesFM paket: 6,552/9,360
+  TimesFM paket: 7,488/9,360
+  TimesFM paket: 8,424/9,360
+  TimesFM paket: 9,360/9,360
+  Prosek pogodaka: 1.700000
+  Najviše pogodaka: 4
+  Stopa 3+: 15.0%
+  Stopa 4+: 5.0%
+
+Walk-forward fold 4/5
+  Istorija pre prve provere: 3,455 redova
+  Provera redova: 3,456–3,475
+  TimesFM paket: 936/9,360
+  TimesFM paket: 1,872/9,360
+  TimesFM paket: 2,808/9,360
+  TimesFM paket: 3,744/9,360
+  TimesFM paket: 4,680/9,360
+  TimesFM paket: 5,616/9,360
+  TimesFM paket: 6,552/9,360
+  TimesFM paket: 7,488/9,360
+  TimesFM paket: 8,424/9,360
+  TimesFM paket: 9,360/9,360
+  Prosek pogodaka: 1.250000
+  Najviše pogodaka: 4
+  Stopa 3+: 5.0%
+  Stopa 4+: 5.0%
+
+Walk-forward fold 5/5
+  Istorija pre prve provere: 4,564 redova
+  Provera redova: 4,565–4,584
+  TimesFM paket: 936/9,360
+  TimesFM paket: 1,872/9,360
+  TimesFM paket: 2,808/9,360
+  TimesFM paket: 3,744/9,360
+  TimesFM paket: 4,680/9,360
+  TimesFM paket: 5,616/9,360
+  TimesFM paket: 6,552/9,360
+  TimesFM paket: 7,488/9,360
+  TimesFM paket: 8,424/9,360
+  TimesFM paket: 9,360/9,360
+  Prosek pogodaka: 1.000000
+  Najviše pogodaka: 2
+  Stopa 3+: 0.0%
+  Stopa 4+: 0.0%
+
+ZBIRNI WALK-FORWARD REZULTAT
+----------------------------------------------------------------------------------------
+Broj provera:                    100
+Prosečan broj pogodaka:          1.290000
+Slučajno očekivanje:             1.256410
+Razlika prema slučajnom:         +0.033590
+Bootstrap interval 95%:          [1.110000, 1.470000]
+Najveći broj pogodaka:           4
+Potpuno tačnih:                  0
+Stopa 3+ pogodaka:               6.0%
+Stopa 4+ pogodaka:               2.0%
+Raspodela pogodaka:
+  0 pogodaka: 22
+  1 pogodaka: 35
+  2 pogodaka: 37
+  3 pogodaka: 4
+  4 pogodaka: 2
+  5 pogodaka: 0
+  6 pogodaka: 0
+  7 pogodaka: 0
+
+========================================================================================
+2. TEŽINE TIMESFM KANDIDATA
+========================================================================================
+Binarno — kontekst 256                          0.333663815
+Binarno — kontekst 1024                         0.331068336
+Binarno — kontekst 2048                         0.326182622
+Gap — kontekst 512                              0.007419415
+Zaglađena distribucija — kontekst 1024          0.000711214
+Binarno — kontekst 512                          0.000661473
+Zaglađena distribucija — kontekst 512           0.000101232
+Zaglađena distribucija — kontekst 2048          0.000058553
+Zaglađena distribucija — kontekst 256           0.000048695
+Gap — kontekst 2048                             0.000045200
+Gap — kontekst 1024                             0.000025287
+Gap — kontekst 256                              0.000014158
+
+========================================================================================
+3. ZAMRZNUTI ZAVRŠNI HOLDOUT
+========================================================================================
+  TimesFM paket: 936/46,800
+  TimesFM paket: 1,872/46,800
+  TimesFM paket: 2,808/46,800
+  TimesFM paket: 3,744/46,800
+  TimesFM paket: 4,680/46,800
+  TimesFM paket: 5,616/46,800
+  TimesFM paket: 6,552/46,800
+  TimesFM paket: 7,488/46,800
+  TimesFM paket: 8,424/46,800
+  TimesFM paket: 9,360/46,800
+  TimesFM paket: 10,296/46,800
+  TimesFM paket: 11,232/46,800
+  TimesFM paket: 12,168/46,800
+  TimesFM paket: 13,104/46,800
+  TimesFM paket: 14,040/46,800
+  TimesFM paket: 14,976/46,800
+  TimesFM paket: 15,912/46,800
+  TimesFM paket: 16,848/46,800
+  TimesFM paket: 17,784/46,800
+  TimesFM paket: 18,720/46,800
+  TimesFM paket: 19,656/46,800
+  TimesFM paket: 20,592/46,800
+  TimesFM paket: 21,528/46,800
+  TimesFM paket: 22,464/46,800
+  TimesFM paket: 23,400/46,800
+  TimesFM paket: 24,336/46,800
+  TimesFM paket: 25,272/46,800
+  TimesFM paket: 26,208/46,800
+  TimesFM paket: 27,144/46,800
+  TimesFM paket: 28,080/46,800
+  TimesFM paket: 29,016/46,800
+  TimesFM paket: 29,952/46,800
+  TimesFM paket: 30,888/46,800
+  TimesFM paket: 31,824/46,800
+  TimesFM paket: 32,760/46,800
+  TimesFM paket: 33,696/46,800
+  TimesFM paket: 34,632/46,800
+  TimesFM paket: 35,568/46,800
+  TimesFM paket: 36,504/46,800
+  TimesFM paket: 37,440/46,800
+  TimesFM paket: 38,376/46,800
+  TimesFM paket: 39,312/46,800
+  TimesFM paket: 40,248/46,800
+  TimesFM paket: 41,184/46,800
+  TimesFM paket: 42,120/46,800
+  TimesFM paket: 43,056/46,800
+  TimesFM paket: 43,992/46,800
+  TimesFM paket: 44,928/46,800
+  TimesFM paket: 45,864/46,800
+  TimesFM paket: 46,800/46,800
+
+ZAMRZNUTI ZAVRŠNI HOLDOUT
+----------------------------------------------------------------------------------------
+Broj provera:                    100
+Prosečan broj pogodaka:          1.190000
+Slučajno očekivanje:             1.256410
+Razlika prema slučajnom:         -0.066410
+Bootstrap interval 95%:          [1.040000, 1.350000]
+Najveći broj pogodaka:           4
+Potpuno tačnih:                  0
+Stopa 3+ pogodaka:               5.0%
+Stopa 4+ pogodaka:               1.0%
+Raspodela pogodaka:
+  0 pogodaka: 18
+  1 pogodaka: 51
+  2 pogodaka: 26
+  3 pogodaka: 4
+  4 pogodaka: 1
+  5 pogodaka: 0
+  6 pogodaka: 0
+  7 pogodaka: 0
+
+========================================================================================
+4. TIMESFM NEXT
+========================================================================================
+  TimesFM paket: 468/468
+NEXT: 09, x, 16, y, 25, z, 29
+
+  Rang    Broj       Verovatnoća      Odnos prema osnovi
+--------------------------------------------------------
+     1      25     53.44848754%                2.977844
+     2      16     51.29830284%                2.858048
+     3       x     50.91465022%                2.836673
+     4       y     37.89020742%                2.111026
+     5       9     37.83727983%                2.108077
+     6      29     34.51509170%                1.922984
+     7       z     32.57334207%                1.814800
+     8       5     31.95093402%                1.780123
+     9       7     29.76850154%                1.658531
+    10      30     29.39376509%                1.637653
+    11      19     29.12841741%                1.622869
+    12      14     26.15884208%                1.457421
+    13       4     21.91135235%                1.220775
+    14      28     18.56000233%                1.034057
+    15      24     18.16132383%                1.011845
+    16      38     17.56914397%                0.978852
+    17      15     15.22507787%                0.848254
+    18      31     15.16351328%                0.844824
+    19      23     14.49909650%                0.807807
+    20      11     11.52580489%                0.642152
+    21      18     10.54614229%                0.587571
+    22       8      9.96183032%                0.555016
+    23       2      9.03470582%                0.503362
+    24      21      8.80357047%                0.490485
+    25      22      8.18931009%                0.456262
+    26      39      7.54886602%                0.420580
+    27      36      7.15308695%                0.398529
+    28      10      6.34447142%                0.353478
+    29      35      6.02425904%                0.335637
+    30       1      5.94972581%                0.331485
+    31       6      4.90010084%                0.273006
+    32       3      4.82725255%                0.268947
+    33      20      4.80324256%                0.267609
+    34      13      4.78517945%                0.266603
+    35      34      4.77829028%                0.266219
+    36      33      4.75105123%                0.264701
+    37      37      4.72616040%                0.263315
+    38      32      4.70493448%                0.262132
+    39      26      4.67468316%                0.260447
+
+########################################################################################
+KONTROLNA LISTA
+########################################################################################
+CSV hronološki učitan                               PROŠLO         redova=4,684
+Formirano 39 binarnih serija                        PROŠLO
+Formirano 39 gap serija                             PROŠLO
+Formirano 39 zaglađenih distribucija                PROŠLO
+Četiri TimesFM konteksta                            PROŠLO
+TimesFM 2.5 bez dodatne obuke                       PROŠLO
+Walk-forward učenje težina                          PROŠLO
+Puna expanding walk-forward validacija              PROŠLO         foldova=5, provera=100, prosek=1.2900
+Zamrznuti završni holdout                           PROŠLO         provera=100, prosek=1.1900
+Kalibracija na zbir sedam                           PROŠLO         zbir=7.000000
+Jedna NEXT predikcija                               PROŠLO
+
+########################################################################################
+KONAČNI REZULTAT — Loto
+########################################################################################
+Broj redova:                      4,684
+Razvojni period:                  4,584
+Walk-forward foldova:             5
+Walk-forward provera:             100
+Walk-forward prosek pogodaka:     1.290000
+Walk-forward interval 95%:        [1.110000, 1.470000]
+Završni holdout:                  100
+Holdout prosek pogodaka:          1.190000
+Holdout interval 95%:             [1.040000, 1.350000]
+NEXT rang:                        13,007,722
+NEXT:                             09, x, 16, y, 25, z, 29
+Vreme obrade:                     301.73 minuta
+
+########################################################################################
+KONAČNA NEXT PREDIKCIJA
+########################################################################################
+Loto:      09, x, 16, y, 25, z, 29
+Loto rang: 13,007,722
+
+Ukupno vreme: 301.75 minuta
 """
 
 
